@@ -1,0 +1,97 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+  background-color: #EDF2F4;
+  color: #2B2D42;
+}
+
+a {
+  text-decoration: none;
+  color: #EF233C;
+  transition: color 0.2s ease;
+}
+
+a:hover {
+  color: #D90429;
+}
+
+button, .btn {
+  cursor: pointer;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  text-align: center;
+  transition: all 0.2s ease;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+button:hover, .btn:hover {
+  opacity: 0.9;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+h1, h2, h3, h4 {
+  color: #2B2D42;
+}
+
+input, select, textarea {
+  padding: 10px;
+  border: 1px solid #8D99AE;
+  border-radius: 6px;
+  width: 100%;
+  margin-bottom: 12px;
+  font-size: 1rem;
+  color: #2B2D42;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.error {
+  color: #D90429;
+  font-weight: 600;
+}
+
+.loading {
+  color: #EF233C;
+  font-weight: 600;
+}
+
+.flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.flex-between {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+@media (max-width: 900px) {
+  .container {
+    padding: 10px;
+  }
+
+  button, .btn {
+    width: 100%;
+  }
+}

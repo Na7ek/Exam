@@ -1,0 +1,147 @@
+.home {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding: 40px 20px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #2B2D42;
+  background-color: #EDF2F4;
+  box-sizing: border-box;
+}
+
+.hero {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #EDF2F4;
+  padding: 80px 30px;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  margin-bottom: 40px;
+  gap: 25px;
+}
+
+.hero h1 {
+  font-size: 3rem;
+  color: #2B2D42;
+  margin: 0;
+}
+
+.hero p {
+  font-size: 1.3rem;
+  color: #8D99AE;
+  line-height: 1.5;
+  margin: 0;
+}
+
+.hero-actions {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.hero-actions .btn {
+  flex: 1 1 180px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+  border-radius: 8px;
+  text-decoration: none;
+  text-align: center;
+  box-sizing: border-box;
+  transition: all 0.2s ease;
+}
+
+.hero-actions .btn.primary {
+  background-color: #EF233C;
+  color: #EDF2F4;
+}
+.hero-actions .btn.primary:hover {
+  background-color: #D90429;
+}
+
+.hero-actions .btn.secondary {
+  background-color: #8D99AE;
+  color: #EDF2F4;
+}
+.hero-actions .btn.secondary:hover {
+  background-color: #2B2D42;
+}
+
+@media (max-width: 900px) {
+  .hero-actions {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .hero-actions .btn {
+    width: 100%;
+  }
+}
+
+.info {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin-top: 40px;
+  flex-wrap: wrap;
+}
+
+.card {
+  background: #EDF2F4;
+  padding: 35px 25px;
+  border-radius: 16px;
+  width: 260px;
+  text-align: center;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 16px 35px rgba(0,0,0,0.12);
+}
+
+.card h3 {
+  color: #2B2D42;
+  font-size: 1.4rem;
+  margin-bottom: 15px;
+}
+
+.card p {
+  color: #8D99AE;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+@media (max-width: 900px) {
+  .hero h1 {
+    font-size: 2.5rem;
+  }
+
+  .hero p {
+    font-size: 1.2rem;
+  }
+
+  .hero-actions {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .hero-actions .btn {
+    width: 80%;
+    margin: 5px 0;
+  }
+
+  .info {
+    flex-direction: column;
+    align-items: center;
+  }
+}

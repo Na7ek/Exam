@@ -1,0 +1,79 @@
+.car-registration-container {
+  min-height: calc(100vh - 140px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 50px 20px;
+  background-color: #EDF2F4;
+}
+
+.car-registration-container h2 {
+  font-size: 2rem;
+  color: #2B2D42;
+  margin-bottom: 40px;
+  text-align: center;
+  letter-spacing: 1px;
+}
+
+form {
+  width: 100%;
+  max-width: 500px;
+  background-color: #EDF2F4;
+  border: 1px solid #8D99AE;
+  border-radius: 12px;
+  padding: 30px 25px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group label {
+  font-weight: 600;
+  margin-bottom: 6px;
+  color: #2B2D42;
+}
+
+.form-group input {
+  padding: 12px 14px;
+  border-radius: 8px;
+  border: 1px solid #8D99AE;
+  font-size: 1rem;
+  transition: all 0.2s ease;
+}
+
+.form-group input:focus {
+  border-color: #EF233C;
+  outline: none;
+  box-shadow: 0 0 5px rgba(239, 35, 60, 0.4);
+}
+
+.btn.primary {
+  padding: 14px 0;
+  background-color: #EF233C;
+  color: #EDF2F4;
+  font-weight: 600;
+  font-size: 1rem;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  margin-top: 10px;
+}
+
+.btn.primary:hover {
+  background-color: #D90429;
+  transform: translateY(-2px);
+}
+
+input[readonly] {
+  background-color: #E5E5E5;
+  cursor: not-allowed;
+  color: #8D99AE;
+}

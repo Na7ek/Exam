@@ -1,0 +1,94 @@
+.profile-container {
+  min-height: calc(100vh - 140px);
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 40px 20px;
+  background-color: #EDF2F4;
+}
+
+.profile-card {
+  width: 100%;
+  max-width: 500px;
+  background-color: white;
+  border-radius: 14px;
+  padding: 30px 25px;
+  box-shadow: 0 12px 30px rgba(0,0,0,0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.profile-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 18px 40px rgba(0,0,0,0.12);
+}
+
+.profile-card h2 {
+  text-align: center;
+  color: #2B2D42;
+  font-size: 1.8rem;
+  margin-bottom: 10px;
+}
+
+.profile-card h3 {
+  text-align: center;
+  color: #EF233C;
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+}
+
+.profile-card p {
+  margin-bottom: 12px;
+  color: #2B2D42;
+  font-size: 0.95rem;
+}
+
+.car-list {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 25px;
+  border-top: 1px solid #8D99AE;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.car-list li {
+  padding: 12px 10px;
+  border-bottom: 1px solid #8D99AE;
+  color: #2B2D42;
+  font-size: 0.95rem;
+  transition: background 0.2s ease;
+}
+
+.car-list li:last-child {
+  border-bottom: none;
+}
+
+.car-list li:hover {
+  background-color: #EDF2F4;
+}
+
+.logout-btn {
+  width: 100%;
+  padding: 14px;
+  background-color: #EF233C;
+  color: #EDF2F4;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.2s ease, transform 0.15s ease;
+}
+
+.logout-btn:hover {
+  background-color: #D90429;
+  transform: translateY(-1px);
+}
+
+.loading,
+.error {
+  text-align: center;
+  color: #D90429;
+  font-weight: 500;
+  margin-top: 20px;
+}
