@@ -1,26 +1,12 @@
 import { useProfile } from "../Hooks/useProfile";
 import { useLogout } from "../Hooks/useLogout";
-import { useState, useEffect } from "react";
-import api from "../api/api";
+import { useUserCars } from "../Hooks/useUserCars";
 import "./ProfilePage.css";
 
 export default function ProfilePage() {
   const profile = useProfile();
   const logout = useLogout();
-
-  const [cars, setCars] = useState([]);
-  const [loadingCars, setLoadingCars] = useState(true);
-  const [error, setError] = useState("");
-
-  useEffect(() => {
-    if (profile.data) {
-      api
-        .get("/cars/user")
-        .then((res) => setCars(res.data))
-        .catch(() => setError("Failed to load registered cars"))
-        .finally(() => setLoadingCars(false));
-    }
-  }, [profile.data]);
+  const userCars = useUserCars();
 
   if (profile.isLoading) return <p className="loading">Loading profile...</p>;
   if (profile.isError) return <p className="error">Error loading profile</p>;
@@ -34,12 +20,12 @@ export default function ProfilePage() {
         <p><strong>ID:</strong> {profile.data.id}</p>
 
         <h3>Registered Cars</h3>
-        {loadingCars && <p>Loading cars...</p>}
-        {error && <p className="error">{error}</p>}
-        {!loadingCars && cars.length === 0 && <p>No cars registered yet.</p>}
+        {userCars.isLoading && <p>Loading cars...</p>}
+        {userCars.isError && <p className="error">Failed to load registered cars</p>}
+        {userCars.data?.length === 0 && <p>No cars registered yet.</p>}
 
         <ul className="car-list">
-          {cars.map((car) => (
+          {userCars.data?.map((car) => (
             <li key={car.id}>
               {car.brand} {car.model} | Plate: {car.plateNumber} | Passport: {car.passportNumber} | Time: {car.time}
             </li>
