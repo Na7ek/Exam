@@ -1,5 +1,5 @@
 import { Navigate } from "react-router-dom";
-import { useProfile } from "../hooks/useProfile";
+import { useProfile } from "../Hooks/useProfile";
 
 export default function ProtectedRoute({ children }) {
   const { isLoading, isError } = useProfile();
