@@ -3,7 +3,7 @@ import "./Footer.css";
 export default function Footer() {
   return (
     <footer className="footer">
-      <p>© 2026 NK/MK. All rights reserved.</p>
+      <p>© 2026 MK/NK. All rights reserved.</p>
 
       <div className="creators">
         <a
