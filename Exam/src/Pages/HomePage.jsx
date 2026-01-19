@@ -5,7 +5,7 @@ export default function HomePage() {
   return (
     <div className="home">
       <section className="hero">
-        <h1>NK/MK Technical Inspection</h1>
+        <h1>MK/NK Technical Inspection</h1>
         <p>
           Book your car inspection in minutes. Clear schedule. No chaos.
         </p>

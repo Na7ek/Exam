@@ -1,14 +1,14 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
-import HomePage from "./pages/HomePage";
+import HomePage from "./Pages/HomePage";
 import LoginPage from "./Pages/LoginPage";
 import RegisterPage from "./Pages/RegisterPage";
 import ProfilePage from "./Pages/ProfilePage";
 import CarRegistration from "./Pages/CarRegistration";
 import SchedulePage from "./Pages/SchedulePage";
 
-import Header from "./components/Header";
-import Footer from "./components/Footer";
+import Header from "./Components/Header";
+import Footer from "./Components/Footer";
 import ProtectedRoute from "./Components/ProtectedRoute";
 
 function App() {
